@@ -1,0 +1,30 @@
+:root{
+    --clr-primary-5:#007bff;
+}
+
+
+.slide-contianer{
+    border: 5px solid var(--clr-primary-5);
+    width: 80vw;
+    margin: 0 auto;
+    height: 40vh;
+    max-width: 80rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--clr-primary-5);
+    color: var(--clr-primary-5);
+    display: grid;
+    place-items:center;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+
