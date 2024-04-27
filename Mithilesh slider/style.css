@@ -28,7 +28,7 @@
     overflow:hidden;
     grid-template-rows: 200px;
     grid-template-columns:repeat(4,100px);
-
+    
 }
 
 
@@ -44,7 +44,9 @@
     display: grid;
     align-content: center;
     justify-content: center;
+   
 }
+
 
 
 
