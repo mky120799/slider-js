@@ -1,0 +1,50 @@
+.slider-container {
+    display: grid;
+    width: 180px;
+    background-color: antiquewhite;
+    row-gap: 5px;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 200px;
+    justify-content: center; /* horizontally center the container */
+    align-items: center; /* vertically center the container */
+    margin: 0 auto; /* horizontally center the container using auto margins */
+}
+
+
+.heading {
+    background-color: lightblue;
+    max-width: 50%;
+    display: grid;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 auto; /* Center the heading horizontally */
+    margin-bottom: 10px;
+}
+
+
+.slider{
+    display: grid;
+    overflow:hidden;
+    grid-template-rows: 200px;
+    grid-template-columns:repeat(4,100px);
+
+}
+
+
+
+.slider button {
+    align-self: center;
+    height: 25%;
+}
+
+.slide {
+    background-color: burlywood;
+    border: 2px dashed black;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
