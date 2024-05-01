@@ -22,9 +22,11 @@ body{
 
 
 .frame{
-    width:572px;
+    width: 572px;
     height: 400px;
     overflow: hidden;
+    position: relative;
+    top: 25%;
     box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -36,7 +38,7 @@ body{
 }
 
 .image{
-    width: 572px;
+    width: 800px;
     height: 100%;
     object-fit: cover;
 }

@@ -4,7 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+   <style>
+    .slider-container {
+    display: grid;
+    width: 180px;
+    background-color: antiquewhite;
+    row-gap: 5px;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 200px;
+    justify-content: center; /* horizontally center the container */
+    align-items: center; /* vertically center the container */
+    margin: 0 auto; /* horizontally center the container using auto margins */
+}
+
+
+.heading {
+    background-color: lightblue;
+    max-width: 50%;
+    display: grid;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 auto; /* Center the heading horizontally */
+    margin-bottom: 10px;
+}
+
+
+.slider {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 200px;
+    grid-template-columns: repeat(4, 100px);
+    transform: translateX(-140px); /* Corrected value with unit */
+}
+
+
+
+
+.slider button {
+    align-self: center;
+    height: 25%;
+}
+
+.slide {
+    background-color: burlywood;
+    border: 2px dashed black;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+     /* Corrected property name */
+    transition: transform .5s ease-in;
+
+}
+
+
+
+
+
+   </style>
 </head>
 <body>
         <div class="heading">  slider demo 🚀 </div>
@@ -15,7 +72,9 @@
             <div class="slide">slide-1 <br>
                 this is the fisrt slide 
             </div>
-            <div class="slide">slide-2 <div>this is second slide</div> </div>
+            <div class="slide">
+                slide-2
+             <div>this is second slide</div> </div>
             <div class="slide">slide-3 <div>
                 <br> this is the third slide</div></div>
             <div class="slide">slide-4 <div><br> this is the third slide</div><br> this the fourth slide</div>
@@ -25,6 +84,33 @@
 
 
     <!-- script code  -->
-    <script src="script.js"></script>
+    <script >
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        const slider = document.querySelector(".slider");
+    
+        // Count the number of slides
+        const slideCount = document.querySelectorAll(".slide").length;
+        let slide = document.querySelectorAll(".slide");
+    
+        let slideIndex = 0;
+    
+        next.addEventListener("click", () => {
+            // Increment slideIndex to move to the next slide
+            slideIndex++;
+            // Calculate the amount to translate the slider
+            let translateAmount = -slideIndex * 100; // Assuming each slide is 100px wide
+            // Apply the translation to the slider
+            slide[slideIndex].style = `transform: translateX(${translateAmount}%)`;
+    
+            // If slideIndex exceeds the total number of slides, loop back to the first slide
+            if (slideIndex >= slideCount) {
+                slideIndex = 0;
+                slide.forEach()
+                slide[slideIndex].style.transform = `translateX(0)`;
+            }
+        });
+
+        </script>
 </body>
 </html>

@@ -23,13 +23,14 @@
 }
 
 
-.slider{
+.slider {
     display: grid;
-    overflow:hidden;
+    overflow: hidden;
     grid-template-rows: 200px;
-    grid-template-columns:repeat(4,100px);
-    
+    grid-template-columns: repeat(4, 100px);
+    transform: translateX(-140px); /* Corrected value with unit */
 }
+
 
 
 
@@ -44,7 +45,9 @@
     display: grid;
     align-content: center;
     justify-content: center;
-   
+     /* Corrected property name */
+    transition: transform .5s ease-in;
+
 }
 
 

@@ -9,6 +9,6 @@ console.log(slide);
 
 // here goes the logic
 let slideIndex=0;
-next.addEventListener("click", ()=>{
-     slide[slideIndex++]='transform: translateX(-100px);'
+next.addEventListener("click", (e)=>{
+     slide[1].style='transform: translateX(-100px);'
 } )
